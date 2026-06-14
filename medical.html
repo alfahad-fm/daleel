@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدليل الطبي الشامل</title>
+<style>
+body{margin:0;background:#eefafa}
+</style>
+</head>
+
+<body>
+
+<!-- ================================================== -->
+<!-- بداية القسم القابل للتضمين: الدليل الطبي الشامل -->
+<!-- انسخ من هنا -->
+<!-- ================================================== -->
+
+<section class="medical-smart-directory">
+
+<style>
+.medical-smart-directory *{box-sizing:border-box;font-family:Tahoma,Arial,sans-serif}
+.medical-smart-directory{
+  direction:rtl;
+  min-height:100vh;
+  background:
+    radial-gradient(circle at top right,rgba(0,191,165,.18),transparent 34%),
+    radial-gradient(circle at bottom left,rgba(0,90,140,.12),transparent 38%),
+    linear-gradient(180deg,#eefafa,#ffffff);
+  color:#123;
+  padding-bottom:35px;
+}
+.medical-smart-directory a{text-decoration:none}
+.medical-smart-directory .hero{
+  padding:44px 16px 76px;
+  text-align:center;
+  color:white;
+  background:
+    radial-gradient(circle at 20% 20%,rgba(255,255,255,.18),transparent 25%),
+    linear-gradient(135deg,#003f5c,#00796b,#00bfa5);
+  border-radius:0 0 38px 38px;
+}
+.medical-smart-directory .hero h1{margin:0;font-size:39px;line-height:1.35}
+.medical-smart-directory .hero p{max-width:880px;margin:12px auto 0;line-height:1.85;font-size:17px}
+.medical-smart-directory .container{max-width:1220px;margin:auto;padding:0 14px}
+.medical-smart-directory .control-panel{
+  margin-top:-48px;
+  background:rgba(255,255,255,.97);
+  border-radius:30px;
+  padding:18px;
+  box-shadow:0 18px 40px rgba(0,80,100,.15);
+  border:1px solid #dff2f1;
+  position:relative;
+  z-index:5;
+}
+.medical-smart-directory .tabs{
+  display:flex;
+  gap:10px;
+  overflow-x:auto;
+  padding-bottom:8px;
+  scrollbar-width:thin;
+}
+.medical-smart-directory .tabs button{
+  border:0;
+  padding:12px 18px;
+  border-radius:999px;
+  background:#eef9f8;
+  color:#00695c;
+  font-weight:bold;
+  white-space:nowrap;
+  cursor:pointer;
+  transition:.2s;
+}
+.medical-smart-directory .tabs button.active{
+  color:white;
+  background:linear-gradient(135deg,#00695c,#00a896);
+  box-shadow:0 8px 18px rgba(0,137,123,.25);
+}
+.medical-smart-directory .filters{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:10px;
+  margin-top:15px;
+}
+.medical-smart-directory select,
+.medical-smart-directory input{
+  width:100%;
+  border:1px solid #cfecea;
+  border-radius:16px;
+  padding:12px;
+  outline:none;
+  background:white;
+  color:#234;
+  font-size:14px;
+}
+.medical-smart-directory select:focus,
+.medical-smart-directory input:focus{
+  border-color:#00a896;
+  box-shadow:0 0 0 4px rgba(0,168,150,.12);
+}
+.medical-smart-directory .switches{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  margin-top:14px;
+}
+.medical-smart-directory .switches button,
+.medical-smart-directory .reset-btn{
+  border:1px solid #cfecea;
+  background:white;
+  color:#00695c;
+  padding:10px 14px;
+  border-radius:999px;
+  cursor:pointer;
+  font-weight:bold;
+}
+.medical-smart-directory .switches button.active{
+  background:#00a896;
+  color:white;
+  border-color:#00a896;
+}
+.medical-smart-directory .reset-btn{
+  background:#f8fbfb;
+  color:#455a64;
+}
+.medical-smart-directory .count{
+  text-align:center;
+  color:#607d8b;
+  margin:18px 0;
+}
+.medical-smart-directory .cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(292px,1fr));
+  gap:18px;
+}
+.medical-smart-directory .card{
+  background:white;
+  border-radius:27px;
+  overflow:hidden;
+  box-shadow:0 12px 30px rgba(0,80,100,.12);
+  border:1px solid #dff2f1;
+  transition:.2s;
+}
+.medical-smart-directory .card:hover{
+  transform:translateY(-3px);
+  box-shadow:0 18px 38px rgba(0,80,100,.16);
+}
+.medical-smart-directory .cover{
+  width:100%;
+  height:145px;
+  object-fit:cover;
+  background:#e0f4f2;
+  display:block;
+}
+.medical-smart-directory .body{padding:18px}
+.medical-smart-directory .top{
+  display:flex;
+  gap:12px;
+  align-items:center;
+  margin-bottom:12px;
+}
+.medical-smart-directory .logo,
+.medical-smart-directory .logo-placeholder{
+  width:58px;
+  height:58px;
+  min-width:58px;
+  border-radius:50%;
+  background:linear-gradient(135deg,#e0f7f5,#fff);
+  border:3px solid #dff5f2;
+  object-fit:cover;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#00897b;
+  font-weight:bold;
+  font-size:24px;
+}
+.medical-smart-directory h3{margin:0;font-size:21px;color:#075e67;line-height:1.4}
+.medical-smart-directory .specialty{margin-top:5px;color:#607d8b;font-weight:bold;font-size:14px}
+.medical-smart-directory .status{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  padding:7px 11px;
+  border-radius:999px;
+  font-size:12px;
+  font-weight:bold;
+  margin-bottom:10px;
+}
+.medical-smart-directory .status.open{background:#e8fff1;color:#118a46;border:1px solid #b7e8c7}
+.medical-smart-directory .status.closed{background:#fff1f1;color:#c62828;border:1px solid #f3b6b6}
+.medical-smart-directory .status.warn{background:#fff8df;color:#8a6400;border:1px solid #f0d58a}
+.medical-smart-directory .info{
+  margin:7px 0;
+  color:#345;
+  line-height:1.7;
+  font-size:14px;
+}
+.medical-smart-directory .badges{
+  display:flex;
+  flex-wrap:wrap;
+  gap:7px;
+  margin:12px 0;
+}
+.medical-smart-directory .badge{
+  background:#eef9f8;
+  color:#00796b;
+  padding:6px 10px;
+  border-radius:999px;
+  font-size:12px;
+  font-weight:bold;
+}
+.medical-smart-directory .badge.gold{background:#fff4d6;color:#8a6400}
+.medical-smart-directory .price{
+  background:#fff9e8;
+  border:1px dashed #e9b533;
+  color:#604700;
+  padding:10px;
+  border-radius:14px;
+  line-height:1.7;
+  font-size:13px;
+}
+.medical-smart-directory .actions{
+  display:flex;
+  gap:8px;
+  margin-top:13px;
+}
+.medical-smart-directory .actions a{
+  flex:1;
+  text-align:center;
+  color:white;
+  padding:10px;
+  border-radius:12px;
+  font-weight:bold;
+  font-size:14px;
+}
+.medical-smart-directory .call{background:#00796b}
+.medical-smart-directory .wa{background:#25d366}
+.medical-smart-directory .map{background:#455a64}
+.medical-smart-directory .empty{
+  grid-column:1/-1;
+  text-align:center;
+  background:white;
+  padding:28px;
+  border-radius:22px;
+  color:#777;
+}
+.medical-smart-directory .footer{
+  margin-top:30px;
+  background:linear-gradient(135deg,#003f5c,#00796b);
+  color:white;
+  border-radius:28px;
+  padding:25px;
+  display:flex;
+  justify-content:space-between;
+  gap:15px;
+  flex-wrap:wrap;
+  align-items:center;
+}
+.medical-smart-directory .footer h2{margin:0 0 8px}
+.medical-smart-directory .footer p{margin:0;line-height:1.8;color:#eafffb}
+.medical-smart-directory .footer a{
+  color:white;
+  padding:12px 18px;
+  border-radius:999px;
+  font-weight:bold;
+  display:inline-block;
+}
+.medical-smart-directory .footer .add-wa{background:#25d366}
+.medical-smart-directory .footer .add-call{background:rgba(255,255,255,.18)}
+@media(max-width:600px){
+  .medical-smart-directory .hero h1{font-size:29px}
+  .medical-smart-directory .actions{flex-direction:column}
+}
+</style>
+
+<div class="hero">
+  <h1>الدليل الطبي الشامل</h1>
+  <p>دليل طبي منظم حسب التصنيفات، الاختصاصات، المناطق، الزيارات المنزلية، الإسعاف الليلي، وحالة الدوام الحالية.</p>
+</div>
+
+<div class="container">
+
+  <div class="control-panel">
+    <div class="tabs" id="msdTabs"></div>
+
+    <div class="filters">
+      <select id="msdSpecialty"></select>
+      <select id="msdArea"></select>
+      <input type="search" id="msdSearch" placeholder="بحث بالاسم أو الخدمة أو العنوان...">
+    </div>
+
+    <div class="switches" id="msdServices"></div>
+  </div>
+
+  <div class="count" id="msdCount"></div>
+  <div class="cards" id="msdCards"></div>
+
+  <div class="footer">
+    <div>
+      <h2>لإضافة بياناتك إلى الدليل</h2>
+      <p>يمكنك التواصل معنا لإضافة طبيب، مركز، مخبر، صيدلية أو خدمة طبية.</p>
+    </div>
+    <div>
+      <a class="add-call" href="tel:0900000000">اتصال</a>
+      <a class="add-wa" href="https://wa.me/963900000000" target="_blank">واتساب</a>
+    </div>
+  </div>
+
+</div>
+
+<script>
+(function(){
+
+/*
+ضع رابط Google Sheets CSV هنا.
+اتركه فارغاً لتعمل الصفحة ببيانات المعاينة الداخلية.
+مثال:
+const CSV_URL = "https://docs.google.com/spreadsheets/d/e/XXXX/pub?output=csv";
+*/
+const CSV_URL = "";
+
+const demoRecords = [
+  {
+    category:"doctor", name:"د. سامر الأحمد", specialty:"داخلية", sub_specialty:"أمراض داخلية وسكري وضغط", area:"وسط المدينة",
+    address:"الشارع الرئيسي - جانب المركز الصحي", working_days:"السبت - الخميس", working_hours:"10 صباحاً - 6 مساءً",
+    work_days:"sat,sun,mon,tue,wed,thu", open_time:"10:00", close_time:"18:00",
+    phone:"0900000001", whatsapp:"963900000001", map_url:"https://maps.google.com/?q=medical+clinic",
+    logo_url:"https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=300&q=80",
+    image_url:"https://images.unsplash.com/photo-1580281658629-2b0a0e9f7a0c?auto=format&fit=crop&w=900&q=80",
+    home_visit:true, night_service:true, emergency_service:true, open_24h:false, delivery:false,
+    services:["كشف عام","سكري","ضغط"], price_info:"الإسعاف الليلي والزيارة المنزلية حسب المنطقة والوقت", description:"متابعة حالات مزمنة واستشارات عامة", status:"active", sort_order:1
+  },
+  {
+    category:"doctor", name:"د. مريم خالد", specialty:"نسائية", sub_specialty:"نسائية وتوليد ومتابعة حمل", area:"مجمع الشفاء",
+    address:"مجمع الشفاء الطبي - الطابق الأول", working_days:"السبت - الخميس", working_hours:"12 ظهراً - 7 مساءً",
+    work_days:"sat,sun,mon,tue,wed,thu", open_time:"12:00", close_time:"19:00",
+    phone:"0900000002", whatsapp:"963900000002", map_url:"https://maps.google.com/?q=women+clinic",
+    logo_url:"https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=300&q=80",
+    image_url:"https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=900&q=80",
+    home_visit:true, night_service:false, emergency_service:false, open_24h:false, delivery:false,
+    services:["متابعة حمل","إيكو","استشارات"], price_info:"الزيارة المنزلية للحالات الخاصة فقط", description:"حجز مسبق", status:"active", sort_order:2
+  },
+  {
+    category:"doctor", name:"د. ليث عمر", specialty:"أطفال", sub_specialty:"أطفال وحديثي ولادة", area:"الحي الغربي",
+    address:"قرب دوار المدينة", working_days:"يومياً عدا الجمعة", working_hours:"9 صباحاً - 5 مساءً",
+    work_days:"sat,sun,mon,tue,wed,thu", open_time:"09:00", close_time:"17:00",
+    phone:"0900000003", whatsapp:"963900000003", map_url:"https://maps.google.com/?q=pediatric+clinic",
+    logo_url:"", image_url:"https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=900&q=80",
+    home_visit:false, night_service:true, emergency_service:true, open_24h:false, delivery:false,
+    services:["أطفال","لقاحات","متابعة نمو"], price_info:"الإسعاف الليلي بعد الاتصال", description:"", status:"active", sort_order:3
+  },
+  {
+    category:"dentist", name:"عيادة ابتسامة", specialty:"أسنان", sub_specialty:"طب وجراحة الأسنان", area:"شارع العيادات",
+    address:"شارع العيادات - قرب الصيدلية المركزية", working_days:"السبت - الخميس", working_hours:"11 صباحاً - 8 مساءً",
+    work_days:"sat,sun,mon,tue,wed,thu", open_time:"11:00", close_time:"20:00",
+    phone:"0900000010", whatsapp:"963900000010", map_url:"https://maps.google.com/?q=dental+clinic",
+    logo_url:"", image_url:"https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=900&q=80",
+    home_visit:false, night_service:true, emergency_service:true, open_24h:false, delivery:false,
+    services:["حشوات","تنظيف","تقويم","زراعة"], price_info:"الأسعار حسب الإجراء", description:"حالات إسعافية حسب توفر الطبيب", status:"active", sort_order:1
+  },
+  {
+    category:"dentist", name:"د. كريم منصور", specialty:"تقويم أسنان", sub_specialty:"تقويم ثابت وشفاف", area:"وسط المدينة",
+    address:"مقابل البلدية", working_days:"الأحد - الخميس", working_hours:"2 ظهراً - 8 مساءً",
+    work_days:"sun,mon,tue,wed,thu", open_time:"14:00", close_time:"20:00",
+    phone:"0900000011", whatsapp:"963900000011", map_url:"https://maps.google.com/?q=orthodontist",
+    logo_url:"", image_url:"https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=900&q=80",
+    home_visit:false, night_service:false, emergency_service:false, open_24h:false, delivery:false,
+    services:["تقويم","استشارة","متابعة شهرية"], price_info:"تحديد السعر بعد الكشف", description:"", status:"active", sort_order:2
+  },
+  {
+    category:"physio", name:"مركز الحركة للعلاج الفيزيائي", specialty:"علاج فيزيائي", sub_specialty:"إصابات عظمية وتأهيل حركي", area:"الحي الشرقي",
+    address:"جانب النادي الرياضي", working_days:"السبت - الخميس", working_hours:"9 صباحاً - 7 مساءً",
+    work_days:"sat,sun,mon,tue,wed,thu", open_time:"09:00", close_time:"19:00",
+    phone:"0900000020", whatsapp:"963900000020", map_url:"https://maps.google.com/?q=physiotherapy",
+    logo_url:"", image_url:"https://images.unsplash.com/photo-1571019613914-85f342c6a11e?auto=format&fit=crop&w=900&q=80",
+    home_visit:true, night_service:false, emergency_service:false, open_24h:false, delivery:false,
+    services:["تأهيل","مساج علاجي","إصابات رياضية"], price_info:"الجلسات المنزلية حسب المنطقة", description:"", status:"active", sort_order:1
+  },
+  {
+    category:"nurse", name:"الممرض أحمد", specialty:"تمريض", sub_specialty:"حقن، ضماد، تركيب سيروم", area:"كافة الأحياء",
+    address:"خدمة منزلية ضمن المدينة", working_days:"يومياً", working_hours:"8 صباحاً - 12 ليلاً",
+    work_days:"sat,sun,mon,tue,wed,thu,fri", open_time:"08:00", close_time:"23:59",
+    phone:"0900000030", whatsapp:"963900000030", map_url:"https://maps.google.com/?q=nursing",
+    logo_url:"", image_url:"https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=900&q=80",
+    home_visit:true, night_service:true, emergency_service:true, open_24h:false, delivery:false,
+    services:["حقن","ضماد","سيروم","قياس ضغط وسكر"], price_info:"السعر حسب الخدمة والوقت والمنطقة", description:"", status:"active", sort_order:1
+  },
+  {
+    category:"midwife", name:"القابلة القانونية أمينة", specialty:"قابلة قانونية", sub_specialty:"متابعة حمل وولادة ورعاية أم وطفل", area:"الحي الجنوبي",
+    address:"زيارات منزلية حسب الموعد", working_days:"يومياً", working_hours:"حسب الموعد",
+    work_days:"sat,sun,mon,tue,wed,thu,fri", open_time:"00:00", close_time:"23:59",
+    phone:"0900000040", whatsapp:"963900000040", map_url:"https://maps.google.com/?q=midwife",
+    logo_url:"", image_url:"https://images.unsplash.com/photo-1551601651-2a8555f1a136?auto=format&fit=crop&w=900&q=80",
+    home_visit:true, night_service:true, emergency_service:true, open_24h:false, delivery:false,
+    services:["زيارة منزلية","متابعة حمل","رعاية مولود"], price_info:"السعر حسب الوقت والمنطقة", description:"", status:"active", sort_order:1
+  },
+  {
+    category:"dental_lab", name:"مختبر الإتقان السني", specialty:"مختبر أسنان", sub_specialty:"تركيبات خزف وزيركون", area:"شارع العيادات",
+    address:"خلف مجمع المدينة الطبي", working_days:"السبت - الخميس", working_hours:"9 صباحاً - 6 مساءً",
+    work_days:"sat,sun,mon,tue,wed,thu", open_time:"09:00", close_time:"18:00",
+    phone:"0900000050", whatsapp:"963900000050", map_url:"https://maps.google.com/?q=dental+lab",
+    logo_url:"", image_url:"https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=900&q=80",
+    home_visit:false, night_service:false, emergency_service:false, open_24h:false, delivery:false,
+    services:["زيركون","خزف","بدلات","تركيبات"], price_info:"الأسعار حسب نوع العمل", description:"", status:"active", sort_order:1
+  },
+  {
+    category:"lab", name:"مخبر الشفاء", specialty:"مخبر تحاليل", sub_specialty:"تحاليل طبية شاملة", area:"وسط المدينة",
+    address:"مقابل المركز الصحي", working_days:"السبت - الخميس", working_hours:"8 صباحاً - 9 مساءً",
+    work_days:"sat,sun,mon,tue,wed,thu", open_time:"08:00", close_time:"21:00",
+    phone:"0900000060", whatsapp:"963900000060", map_url:"https://maps.google.com/?q=medical+lab",
+    logo_url:"", image_url:"https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&w=900&q=80",
+    home_visit:true, night_service:true, emergency_service:false, open_24h:false, delivery:false,
+    services:["تحاليل دم","هرمونات","سكر","سحب منزلي"], price_info:"السحب المنزلي يضاف له بدل انتقال", description:"", status:"active", sort_order:1
+  },
+  {
+    category:"imaging", name:"مركز النور للتصوير", specialty:"تصوير شعاعي", sub_specialty:"أشعة وإيكو وبانوراما", area:"مجمع الشفاء",
+    address:"بجانب المجمع الطبي", working_days:"السبت - الخميس", working_hours:"9 صباحاً - 7 مساءً",
+    work_days:"sat,sun,mon,tue,wed,thu", open_time:"09:00", close_time:"19:00",
+    phone:"0900000070", whatsapp:"963900000070", map_url:"https://maps.google.com/?q=radiology",
+    logo_url:"", image_url:"https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=900&q=80",
+    home_visit:false, night_service:true, emergency_service:true, open_24h:false, delivery:false,
+    services:["إيكو","أشعة","بانوراما أسنان","دوبلر"], price_info:"السعر حسب نوع التصوير", description:"", status:"active", sort_order:1
+  },
+  {
+    category:"imaging", name:"مركز الرعاية للتصوير", specialty:"رنين وطبقي", sub_specialty:"رنين مغناطيسي وطبقي محوري", area:"الحي الغربي",
+    address:"قرب المشفى", working_days:"يومياً", working_hours:"8 صباحاً - 10 مساءً",
+    work_days:"sat,sun,mon,tue,wed,thu,fri", open_time:"08:00", close_time:"22:00",
+    phone:"0900000071", whatsapp:"963900000071", map_url:"https://maps.google.com/?q=mri+center",
+    logo_url:"", image_url:"https://images.unsplash.com/photo-1581594693702-fbdc51b2763b?auto=format&fit=crop&w=900&q=80",
+    home_visit:false, night_service:true, emergency_service:true, open_24h:false, delivery:false,
+    services:["رنين مغناطيسي","طبقي محوري","ماموغرام"], price_info:"التسعير حسب نوع الصورة", description:"", status:"active", sort_order:2
+  },
+  {
+    category:"pharmacy", name:"صيدلية الحياة", specialty:"صيدلية", sub_specialty:"أدوية ومستلزمات طبية", area:"الشارع العام",
+    address:"الشارع العام - قرب الدوار", working_days:"يومياً", working_hours:"24 ساعة",
+    work_days:"sat,sun,mon,tue,wed,thu,fri", open_time:"00:00", close_time:"23:59",
+    phone:"0900000080", whatsapp:"963900000080", map_url:"https://maps.google.com/?q=pharmacy",
+    logo_url:"", image_url:"https://images.unsplash.com/photo-1587854692152-cbe660dbde88?auto=format&fit=crop&w=900&q=80",
+    home_visit:false, night_service:true, emergency_service:false, open_24h:true, delivery:true,
+    services:["أدوية","مستلزمات","توصيل","مناوبة"], price_info:"التوصيل حسب المنطقة", description:"", status:"active", sort_order:1
+  },
+  {
+    category:"pharmacy", name:"صيدلية الشفاء", specialty:"صيدلية", sub_specialty:"أدوية أطفال ومستلزمات", area:"مجمع الشفاء",
+    address:"مدخل مجمع الشفاء الطبي", working_days:"السبت - الخميس", working_hours:"8 صباحاً - 12 ليلاً",
+    work_days:"sat,sun,mon,tue,wed,thu", open_time:"08:00", close_time:"23:59",
+    phone:"0900000081", whatsapp:"963900000081", map_url:"https://maps.google.com/?q=pharmacy",
+    logo_url:"", image_url:"https://images.unsplash.com/photo-1576602976047-174e57a47881?auto=format&fit=crop&w=900&q=80",
+    home_visit:false, night_service:true, emergency_service:false, open_24h:false, delivery:false,
+    services:["أدوية","أطفال","مستلزمات"], price_info:"دوام ليلي حتى 12 ليلاً", description:"", status:"active", sort_order:2
+  },
+  {
+    category:"medical_supplies", name:"مركز العناية للمستلزمات الطبية", specialty:"مستلزمات طبية", sub_specialty:"أجهزة قياس، كراسي، أسرة طبية", area:"السوق",
+    address:"شارع السوق - قرب الصيدلية", working_days:"السبت - الخميس", working_hours:"9 صباحاً - 8 مساءً",
+    work_days:"sat,sun,mon,tue,wed,thu", open_time:"09:00", close_time:"20:00",
+    phone:"0900000090", whatsapp:"963900000090", map_url:"https://maps.google.com/?q=medical+supplies",
+    logo_url:"", image_url:"https://images.unsplash.com/photo-1583947215259-38e31be8751f?auto=format&fit=crop&w=900&q=80",
+    home_visit:false, night_service:false, emergency_service:false, open_24h:false, delivery:true,
+    services:["أجهزة قياس","كراسي طبية","أسرة","توصيل"], price_info:"الأسعار حسب المنتج", description:"", status:"active", sort_order:1
+  }
+];
+
+const categories = [
+  {key:"all",label:"الكل"},
+  {key:"doctor",label:"أطباء"},
+  {key:"dentist",label:"أطباء أسنان"},
+  {key:"physio",label:"علاج فيزيائي"},
+  {key:"nurse",label:"ممرض"},
+  {key:"midwife",label:"قابلة قانونية"},
+  {key:"dental_lab",label:"مختبر أسنان"},
+  {key:"lab",label:"مخبر تحاليل"},
+  {key:"imaging",label:"مراكز تصوير"},
+  {key:"pharmacy",label:"صيدليات"},
+  {key:"medical_supplies",label:"مستلزمات طبية"}
+];
+
+const serviceLabels = {
+  home_visit:"زيارات منزلية",
+  night_service:"إسعاف / دوام ليلي",
+  emergency_service:"حالات إسعافية",
+  open_24h:"24 ساعة",
+  delivery:"توصيل"
+};
+
+let records = [];
+let currentCategory = "all";
+let activeServices = new Set();
+let searchText = "";
+
+const tabsEl = document.getElementById("msdTabs");
+const specialtyEl = document.getElementById("msdSpecialty");
+const areaEl = document.getElementById("msdArea");
+const searchEl = document.getElementById("msdSearch");
+const servicesEl = document.getElementById("msdServices");
+const cardsEl = document.getElementById("msdCards");
+const countEl = document.getElementById("msdCount");
+
+function clean(v){return v === undefined || v === null ? "" : String(v).trim();}
+function yes(v){v = clean(v).toLowerCase(); return ["نعم","yes","true","1","متوفر","متوفرة","available"].includes(v);}
+function safe(v){return clean(v).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");}
+
+function parseCSV(text){
+  const rows = [];
+  let row = [], value = "", quote = false;
+  for(let i=0;i<text.length;i++){
+    const c = text[i], n = text[i+1];
+    if(c === '"' && quote && n === '"'){value += '"'; i++;}
+    else if(c === '"'){quote = !quote;}
+    else if(c === "," && !quote){row.push(value); value = "";}
+    else if((c === "\n" || c === "\r") && !quote){
+      if(value || row.length){row.push(value); rows.push(row); row=[]; value="";}
+      if(c === "\r" && n === "\n") i++;
+    }else{value += c;}
+  }
+  if(value || row.length){row.push(value); rows.push(row);}
+  const headers = rows.shift().map(h=>clean(h));
+  return rows.map(r=>{
+    const obj = {};
+    headers.forEach((h,i)=>obj[h] = clean(r[i]));
+    return obj;
+  });
+}
+
+function normalize(row){
+  return {
+    id:clean(row.id),
+    category:clean(row.category || row.type),
+    name:clean(row.name),
+    specialty:clean(row.specialty),
+    sub_specialty:clean(row.sub_specialty),
+    area:clean(row.area || row.location),
+    address:clean(row.address),
+    working_days:clean(row.working_days),
+    working_hours:clean(row.working_hours),
+    work_days:clean(row.work_days),
+    open_time:clean(row.open_time),
+    close_time:clean(row.close_time),
+    phone:clean(row.phone),
+    whatsapp:clean(row.whatsapp),
+    map_url:clean(row.map_url),
+    logo_url:clean(row.logo_url),
+    image_url:clean(row.image_url),
+    home_visit:yes(row.home_visit),
+    night_service:yes(row.night_service),
+    emergency_service:yes(row.emergency_service),
+    open_24h:yes(row.open_24h),
+    delivery:yes(row.delivery),
+    services:clean(row.services).split(",").map(s=>s.trim()).filter(Boolean),
+    price_info:clean(row.price_info),
+    description:clean(row.description),
+    status:clean(row.status) || "active",
+    sort_order:Number(row.sort_order || 9999)
+  };
+}
+
+function currentSource(){
+  return records.filter(r => r.status !== "hidden" && (currentCategory === "all" || r.category === currentCategory));
+}
+function unique(arr){return [...new Set(arr.filter(Boolean))];}
+
+function timeToMinutes(t){
+  const parts = clean(t).split(":");
+  if(parts.length < 2) return null;
+  const h = Number(parts[0]);
+  const m = Number(parts[1]);
+  if(Number.isNaN(h) || Number.isNaN(m)) return null;
+  return h * 60 + m;
+}
+
+function getCurrentStatus(item){
+  if(item.open_24h){
+    return {text:"🟢 مفتوح 24 ساعة", cls:"open"};
+  }
+
+  if(!item.open_time || !item.close_time || !item.work_days){
+    return {text:"ℹ️ الدوام حسب الموعد", cls:"warn"};
+  }
+
+  const now = new Date();
+  const days = ["sun","mon","tue","wed","thu","fri","sat"];
+  const today = days[now.getDay()];
+  const allowedDays = clean(item.work_days).split(",").map(d=>d.trim().toLowerCase()).filter(Boolean);
+
+  if(allowedDays.length && !allowedDays.includes(today)){
+    return {text:"🔴 إجازة اليوم", cls:"closed"};
+  }
+
+  const current = now.getHours() * 60 + now.getMinutes();
+  const open = timeToMinutes(item.open_time);
+  const close = timeToMinutes(item.close_time);
+
+  if(open === null || close === null){
+    return {text:"ℹ️ الدوام حسب الموعد", cls:"warn"};
+  }
+
+  let isOpen = false;
+
+  if(close >= open){
+    isOpen = current >= open && current <= close;
+  }else{
+    isOpen = current >= open || current <= close;
+  }
+
+  return isOpen
+    ? {text:"🟢 متاح الآن", cls:"open"}
+    : {text:"🔴 مغلق الآن", cls:"closed"};
+}
+
+function renderTabs(){
+  tabsEl.innerHTML = categories.map(c=>`
+    <button class="${currentCategory===c.key ? "active" : ""}" data-cat="${c.key}">${c.label}</button>
+  `).join("");
+
+  tabsEl.querySelectorAll("button").forEach(btn=>{
+    btn.onclick = ()=>{
+      currentCategory = btn.dataset.cat;
+      activeServices.clear();
+      renderAll(true);
+    };
+  });
+}
+
+function renderSelects(reset){
+  const source = currentSource();
+  const oldSpecialty = specialtyEl.value;
+  const oldArea = areaEl.value;
+
+  const specialties = unique(source.map(r=>r.specialty));
+  const areas = unique(source.map(r=>r.area));
+
+  specialtyEl.innerHTML =
+    `<option value="all">كل الاختصاصات</option>` +
+    specialties.map(s=>`<option value="${safe(s)}">${safe(s)}</option>`).join("");
+
+  areaEl.innerHTML =
+    `<option value="all">كل المناطق</option>` +
+    areas.map(a=>`<option value="${safe(a)}">${safe(a)}</option>`).join("");
+
+  specialtyEl.value = reset ? "all" : (specialties.includes(oldSpecialty) ? oldSpecialty : "all");
+  areaEl.value = reset ? "all" : (areas.includes(oldArea) ? oldArea : "all");
+}
+
+function renderServiceFilters(){
+  const source = currentSource();
+  const available = [];
+  Object.keys(serviceLabels).forEach(key=>{ if(source.some(r=>r[key])) available.push(key); });
+
+  servicesEl.innerHTML = available.map(key=>`
+    <button class="${activeServices.has(key) ? "active" : ""}" data-service="${key}">${serviceLabels[key]}</button>
+  `).join("");
+
+  servicesEl.innerHTML += `<button class="reset-btn" data-reset="1">إعادة تعيين</button>`;
+
+  servicesEl.querySelectorAll("button").forEach(btn=>{
+    if(btn.dataset.reset){
+      btn.onclick = ()=>{
+        activeServices.clear();
+        specialtyEl.value = "all";
+        areaEl.value = "all";
+        searchEl.value = "";
+        searchText = "";
+        renderAll(false);
+      };
+      return;
+    }
+
+    btn.onclick = ()=>{
+      const key = btn.dataset.service;
+      activeServices.has(key) ? activeServices.delete(key) : activeServices.add(key);
+      renderCards();
+      renderServiceFilters();
+    };
+  });
+}
+
+function row(icon,label,value){
+  if(!clean(value)) return "";
+  return `<div class="info">${icon} <strong>${label}:</strong> ${safe(value)}</div>`;
+}
+
+function matchRecord(r){
+  if(currentCategory !== "all" && r.category !== currentCategory) return false;
+  if(specialtyEl.value !== "all" && r.specialty !== specialtyEl.value) return false;
+  if(areaEl.value !== "all" && r.area !== areaEl.value) return false;
+  for(const key of activeServices){ if(!r[key]) return false; }
+
+  if(searchText){
+    const text = [
+      r.name,r.specialty,r.sub_specialty,r.area,r.address,
+      r.working_days,r.working_hours,r.phone,r.description,
+      ...r.services
+    ].join(" ").toLowerCase();
+
+    if(!text.includes(searchText.toLowerCase())) return false;
+  }
+
+  return true;
+}
+
+function renderCards(){
+  const items = records.filter(matchRecord).sort((a,b)=>a.sort_order-b.sort_order);
+  countEl.textContent = "عدد النتائج: " + items.length;
+
+  if(!items.length){
+    cardsEl.innerHTML = `<div class="empty">لا توجد نتائج مطابقة حالياً</div>`;
+    return;
+  }
+
+  cardsEl.innerHTML = items.map(r=>{
+    const phone = clean(r.phone).replace(/\s+/g,"");
+    const wa = clean(r.whatsapp || r.phone).replace(/\s+/g,"");
+    const status = getCurrentStatus(r);
+
+    return `
+      <div class="card">
+        ${r.image_url ? `<img class="cover" src="${safe(r.image_url)}" alt="">` : ""}
+        <div class="body">
+          <div class="top">
+            ${r.logo_url ? `<img class="logo" src="${safe(r.logo_url)}" alt="">` : `<div class="logo-placeholder">✚</div>`}
+            <div>
+              <h3>${safe(r.name)}</h3>
+              <div class="specialty">${safe(r.specialty)}</div>
+            </div>
+          </div>
+
+          <div class="status ${status.cls}">${status.text}</div>
+
+          ${row("📌","التفصيل",r.sub_specialty)}
+          ${row("📍","المنطقة",r.area)}
+          ${row("🏥","العنوان",r.address)}
+          ${row("📅","أيام الدوام",r.working_days)}
+          ${row("🕒","ساعات الدوام",r.working_hours)}
+          ${row("📞","الهاتف",r.phone)}
+          ${row("📝","ملاحظات",r.description)}
+
+          <div class="badges">
+            ${r.home_visit ? `<span class="badge gold">زيارات منزلية</span>` : ""}
+            ${r.night_service ? `<span class="badge gold">إسعاف / دوام ليلي</span>` : ""}
+            ${r.emergency_service ? `<span class="badge gold">حالات إسعافية</span>` : ""}
+            ${r.open_24h ? `<span class="badge gold">24 ساعة</span>` : ""}
+            ${r.delivery ? `<span class="badge gold">توصيل</span>` : ""}
+            ${r.services.map(s=>`<span class="badge">${safe(s)}</span>`).join("")}
+          </div>
+
+          ${r.price_info ? `<div class="price">${safe(r.price_info)}</div>` : ""}
+
+          <div class="actions">
+            ${phone ? `<a class="call" href="tel:${phone}">اتصال</a>` : ""}
+            ${wa ? `<a class="wa" target="_blank" href="https://wa.me/${wa}">واتساب</a>` : ""}
+            ${r.map_url ? `<a class="map" target="_blank" href="${safe(r.map_url)}">الموقع</a>` : ""}
+          </div>
+        </div>
+      </div>
+    `;
+  }).join("");
+}
+
+function renderAll(resetSelects){
+  renderTabs();
+  renderSelects(resetSelects);
+  renderServiceFilters();
+  renderCards();
+}
+
+async function loadData(){
+  if(!CSV_URL){
+    records = demoRecords;
+    renderAll(true);
+    return;
+  }
+
+  try{
+    const response = await fetch(CSV_URL);
+    const text = await response.text();
+    records = parseCSV(text).map(normalize).filter(r=>r.name && r.category);
+    renderAll(true);
+  }catch(e){
+    cardsEl.innerHTML = `<div class="empty">تعذر تحميل ملف CSV</div>`;
+  }
+}
+
+specialtyEl.onchange = renderCards;
+areaEl.onchange = renderCards;
+searchEl.oninput = function(){
+  searchText = this.value.trim();
+  renderCards();
+};
+
+loadData();
+
+})();
+</script>
+
+</section>
+
+<!-- ================================================== -->
+<!-- نهاية القسم القابل للتضمين -->
+<!-- انسخ إلى هنا -->
+<!-- ================================================== -->
+
+</body>
+</html>
