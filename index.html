@@ -298,8 +298,8 @@ body{margin:0;background:#eefafa}
       <p>يمكنك التواصل معنا لإضافة طبيب، مركز، مخبر، صيدلية أو خدمة طبية.</p>
     </div>
     <div>
-      <a class="add-call" href="tel:0900000000">اتصال</a>
-      <a class="add-wa" href="https://wa.me/963900000000" target="_blank">واتساب</a>
+      <a class="add-call" href="tel:00963935865741">اتصال</a>
+      <a class="add-wa" href="https://wa.me/963957334175" target="_blank">واتساب</a>
     </div>
   </div>
 
@@ -735,8 +735,9 @@ function renderCards(){
           ${r.price_info ? `<div class="price">${safe(r.price_info)}</div>` : ""}
 
           <div class="actions">
-            ${phone ? `<a class="call" href="00963935865741:${phone}">اتصال</a>` : ""}
-            ${wa ? `<a class="wa" target="_blank" href="https://wa.me/963957334175">واتساب</a>` : ""}
+             ${phone ? `<a class="call" href="tel:${phone}">اتصال</a>` : ""}
+            ${wa ? `<a class="wa" target="_blank" href="https://wa.me/${wa}">واتساب</a>` : ""}
+            ${r.map_url ? `<a class="map" target="_blank" href="${safe(r.map_url)}">الموقع</a>` : ""}
           </div>
         </div>
       </div>
