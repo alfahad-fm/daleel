@@ -466,8 +466,7 @@ function matchRecord(r){
 function renderCards(){
   const items = records
     .filter(matchRecord)
-    .sort((a,b)=>clean(a.name).localeCompare(clean(b.name),"ar"));
-
+    
   countEl.textContent = "عدد النتائج: " + items.length;
 
   if(!items.length){
@@ -539,11 +538,12 @@ function renderAll(resetSelects){
 async function loadData(){
   cardsEl.innerHTML = `<div class="empty">جاري تحميل البيانات...</div>`;
 
-  const { data, error } = await supabaseClient
-    .from(TABLE_NAME)
-    .select("*")
-    .eq("status", "active");
-
+const { data, error } = await supabaseClient
+  .from(TABLE_NAME)
+  .select("*")
+  .eq("status", "active")
+  .order("external_id", { ascending: true });
+  
   if(error){
     console.error(error);
     cardsEl.innerHTML = `
